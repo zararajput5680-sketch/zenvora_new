@@ -1,0 +1,318 @@
+/* ==========================================================================
+   ZENVORA - Responsive Breakpoints & Mobile Optimization
+   ========================================================================== */
+
+/* Large Laptops & Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .hero-headline {
+    font-size: 3.2rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .category-image-wrap {
+    height: 380px;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+}
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-quote {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-image-frame img {
+    height: 480px;
+  }
+
+  .hero-float-card {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-content {
+    padding-left: 0;
+  }
+
+  .about-pillars {
+    text-align: center;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .quickview-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qv-main-img-wrap {
+    height: 360px;
+  }
+
+  .checkout-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .announcement-bar {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+
+  .brand-logo {
+    font-size: 1.65rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-subhead {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .promo-title {
+    font-size: 2.3rem;
+  }
+
+  .promo-banner-section {
+    padding: 70px 0;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .category-image-wrap {
+    height: 280px;
+  }
+
+  .category-card-title {
+    font-size: 1.25rem;
+  }
+
+  .category-card-subtitle {
+    display: none;
+  }
+
+  .category-overlay {
+    padding: 16px 14px;
+  }
+
+  .product-thumb-wrap {
+    height: 260px;
+  }
+
+  .product-card-body {
+    padding: 12px 10px;
+  }
+
+  .product-title {
+    font-size: 0.85rem;
+  }
+
+  .current-price {
+    font-size: 0.95rem;
+  }
+
+  .product-hover-actions {
+    display: none; /* Mobile tap opens quickview directly on title/image */
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .side-drawer {
+    max-width: 100%;
+  }
+
+  .modal-dialog {
+    max-height: 95vh;
+  }
+
+  .quickview-layout {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-dialog {
+    padding: 24px 16px;
+  }
+}
+
+/* Extra Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+
+  .hero-image-frame img {
+    height: 380px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-image-wrap {
+    height: 320px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Navigation Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.15);
+  z-index: 205;
+  transform: translateX(-100%);
+  transition: transform var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-nav-links {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-nav-link.nav-sale {
+  color: #B22222;
+}
+
+.mobile-nav-footer {
+  margin-top: auto;
+  padding: 24px;
+  background-color: var(--bg-soft);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mobile-nav-contact-item {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
